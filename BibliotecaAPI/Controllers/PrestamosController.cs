@@ -2,6 +2,7 @@
 using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Dynamic;
 
 namespace BibliotecaAPI.Controllers
 {
@@ -22,11 +23,19 @@ namespace BibliotecaAPI.Controllers
             try
             {
                 prestamosManager.RegistrarPrestamo(registroPrestamo);
-                return Ok("Se registro prestamo de manera exitosa");
+
+                dynamic response = new ExpandoObject();
+                response.message = "Se registro correctamente el prestamo";
+
+
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                dynamic response = new ExpandoObject();
+                response.message = ex.Message; 
+
+                return Ok(response);
             }
         }
     }

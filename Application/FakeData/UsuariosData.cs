@@ -25,8 +25,24 @@ namespace Application.FakeData
                    Email = "ivan.am2694@gmail.com",
                    Telefono = "980147491",
 
+                },
+                new Usuario()
+                {
+                   Id = 2,
+                   Nombres = "Brian Hernán",
+                   Apellidos = "Aguilar Mariños",
+                   Direccion = "Marcabalito",
+                   DNI = "70010308",
+                   Email = "ivan.am15@gmail.com",
+                   Telefono = "980147493",
+
                 }
             };
+        }
+
+        public List<Usuario> GetUsuarios()
+        {
+            return this.usuarios;
         }
     }
 }

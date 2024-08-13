@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    public interface ILibrosData
+    public interface ILibrosManager
     {
         List<Libro> GetLibros();
     }

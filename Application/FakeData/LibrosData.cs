@@ -38,6 +38,11 @@ namespace Application.FakeData
             };
         }
 
+        public List<Libro> GetLibros()
+        {
+            return this.libros;
+        }
+
         
     }
 }

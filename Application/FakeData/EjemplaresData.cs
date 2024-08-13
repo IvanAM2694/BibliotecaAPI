@@ -72,7 +72,7 @@ namespace Application.FakeData
                 if(ejemplaresDisponibles.Count <= 0)
                     throw new Exception("No existen ejemplares disponibles del libro");
 
-                ejemplar = ejemplaresDisponibles[1];
+                ejemplar = ejemplaresDisponibles[0];
             }
             catch (Exception ex)
             {
